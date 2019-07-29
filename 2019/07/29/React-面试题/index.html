@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  
+
+  
+
+  
+    <meta name="author" content="John Doe">
+  
+
+  
+
+  
+
+  <title>React 面试题 | Hexo</title>
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="https://cdn.bootcss.com/highlight.js/9.15.6/styles/default.min.css" rel="stylesheet">
+  
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="container">
+    <!-- header -->
+<header class="header">
+  <div class="header-container ">
+    <nav class="header-navbar">
+      <div class="header-navbar-left">
+        <h1 class="header-navbar-logo">
+          <a href="/">
+            
+              <img src="https://qiniu.miiiku.xyz/src/images/logo.png" alt="Hexo">
+            
+          </a>
+        </h1>
+      </div>
+      <div class="header-navbar-right">
+        <div class="header-navbar-btn">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul class="header-navbar-list">
+          
+            <li class="header-navbar-item"><a href="/">首页</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+    <section id="main"><!-- 文章详情页 -->
+
+<!-- banner container -->
+<div class="banner-container" style="background-image: url(https://qiniu.miiiku.xyz/src/images/banner.jpg)">
+  <div class="banner-inner">
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+      <h1 class="header-title"><a href="/2019/07/29/React-面试题/">React 面试题</a></h1>
+      <h2 class="header-subtitle">
+        
+          
+          <!--
+          
+  <a href="javascript:;" class="article-date">
+    <time datetime="2019-07-29T08:25:08.000Z" itemprop="datePublished">2019-07-29 04:25:08</time>
+  </a>
+
+          -->
+        
+      </h2>
+    
+
+    
+    
+  </div>
+</div>
+
+<!-- 文章内容 -->
+
+<div class="body-container">
+  <article id="article-content" class="main-container article-content zoom">
+    
+    
+
+    <div class="article-entry">
+      <h3 id="1-区分Real-DOM和Virtual-DOM"><a href="#1-区分Real-DOM和Virtual-DOM" class="headerlink" title="1.区分Real DOM和Virtual DOM"></a>1.<strong>区分Real DOM和Virtual DOM</strong></h3><p><em>HTML DOM 是关于如何获取、修改、添加或删除 HTML 元素的标准。</em></p>
+<p>Real DOM</p>
+<ol>
+<li>更新缓慢。</li>
+<li>可以直接更新 HTML。</li>
+<li>如果元素更新，则创建新DOM。</li>
+<li>DOM操作代价很高。</li>
+<li>消耗的内存较多。</li>
+</ol>
+<p>Virtual DOM</p>
+<ol>
+<li>更新更快。</li>
+<li>无法直接更新 HTML。</li>
+<li>如果元素更新，则更新 JSX 。</li>
+<li>DOM 操作非常简单。</li>
+<li>很少的内存消耗。</li>
+</ol>
+<h3 id="2-React有什么特点？"><a href="#2-React有什么特点？" class="headerlink" title="2.React有什么特点？"></a>2.<strong>React有什么特点？</strong></h3><p>  1.它使用虚拟DOM 而不是真正的DOM。<br>  2.它可以进行服务器端渲染。(react实现ssr服务器端渲染,SSR 是 server side render 的缩写，从字面上就可以理解在服务器端渲染，那渲染什么呢，很显然渲染现在框架中的前后端分离所创建的虚拟 DOM,</p>
+<p>服务器端渲染：增加首屏加载速度，解决白屏问题。可以直接渲染页面，利于 SEO 优化)<br>  3.它遵循单向数据流或数据绑定。</p>
+<h3 id="3-列出React的一些主要优点和缺点"><a href="#3-列出React的一些主要优点和缺点" class="headerlink" title="3. 列出React的一些主要优点和缺点"></a>3. 列出React的一些主要优点和缺点</h3><p>优点</p>
+<p>1.它提高了应用的性能</p>
+<p>2.可以方便地在客户端和服务器端使用</p>
+<p>3.由于 JSX，代码的可读性很好</p>
+<p>4.React 很容易与 Meteor，Angular 等其他框架集成</p>
+<p>5.使用React，编写UI测试用例变得非常容易</p>
+<p>6.React速度很快：它并不直接对DOM进行操作，引入了一个叫做虚拟DOM的概念，安插在javascript逻辑和实际的DOM之间，性能好。</p>
+<p>7.跨浏览器兼容：虚拟DOM帮助我们解决了跨浏览器问题，它为我们提供了标准化的API，甚至在IE8中都是没问题的。</p>
+<p>8.一切都是component：代码更加模块化，重用代码更容易，可维护性高。</p>
+<p>9.单向数据流：Flux是一个用于在JavaScript应用中创建单向数据层的<a href="http://lib.csdn.net/base/16" target="_blank" rel="noopener">架构</a>，它随着React视图库的开发而被Facebook概念化。</p>
+<p>10.同构、纯粹的javascript：因为搜索引擎的爬虫程序依赖的是服务端响应而不是JavaScript的执行，预渲染你的应用有助于搜索引擎优化。</p>
+<p>11.兼容性好：比如使用RequireJS来加载和打包，而Browserify和Webpack适用于构建大型应用。它们使得那些艰难的任务不再让人望而生畏。</p>
+<p>缺点</p>
+<p>1.React本身只是一个V（库）而已，并不是一个完整的框架，所以如果是大型项目想要一套完整的框架的话，基本都需要加上ReactRouter和Flux才能写大型应用</p>
+<p>2.它的库非常庞大，需要时间来理解</p>
+<p>3.新手程序员可能很难理解</p>
+<p>4.编码变得复杂，因为它使用内联模板和 JSX</p>
+<p>5.大多数坑没踩出来。。。。。</p>
+<h3 id="4-什么是JSX？"><a href="#4-什么是JSX？" class="headerlink" title="4. 什么是JSX？"></a>4. <strong>什么是JSX？</strong></h3><p>JSX 是J avaScript XML 的简写。是 React 使用的一种文件，它利用 JavaScript 的表现力和类似 HTML 的模板语法。这使得 HTML 文件非常容易理解。此文件能使应用非常可靠，并能够提高其性能。下面是JSX的一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">render()&#123;</span><br><span class="line">    return(        </span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;h1&gt; Hello World from Edureka!!&lt;/h1&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5-你了解-Virtual-DOM-吗？解释一下它的工作原理。"><a href="#5-你了解-Virtual-DOM-吗？解释一下它的工作原理。" class="headerlink" title="5.你了解 Virtual DOM 吗？解释一下它的工作原理。"></a>5.<strong>你了解 Virtual DOM 吗？解释一下它的工作原理。</strong></h3><p>Virtual DOM 是一个轻量级的 JavaScript 对象，它最初只是 real DOM 的副本。它是一个节点树，它将元素、它们的属性和内容作为对象及其属性。 React 的渲染函数从 React 组件中创建一个节点树。然后它响应数据模型中的变化来更新该树，该变化是由用户或系统完成的各种动作引起的。</p>
+<p>Virtual DOM 工作过程有三个简单的步骤：</p>
+<p>1.每当底层数据发生改变时，整个 UI 都将在 Virtual DOM 描述中重新渲染。</p>
+<p><img src="/.io//Users\student\Desktop\tupian\13133049-78fc12f6dcb6e9be (1" alt>.webp)</p>
+<p>2.然后计算之前 DOM 表示与新表示的之间的差异。</p>
+<p><img src="/.io//Users\student\Desktop\tupian\13133049-bf2f5564cac2d6e6.webp" alt></p>
+<p>3.完成计算后，将只用实际更改的内容更新 real DOM。</p>
+<p><img src="/.io//Users\student\Desktop\tupian\13133049-d622638e1ebdf7c2.webp" alt></p>
+<h3 id="6-为什么浏览器无法读取JSX？"><a href="#6-为什么浏览器无法读取JSX？" class="headerlink" title="6.为什么浏览器无法读取JSX？"></a>6.<strong>为什么浏览器无法读取JSX？</strong></h3><p>浏览器只能处理 JavaScript 对象，而不能读取常规 JavaScript 对象中的 JSX。所以为了使浏览器能够读取 JSX，首先，需要用像 Babel 这样的 JSX 转换器将 JSX 文件转换为 JavaScript 对象，然后再将其传给浏览器。</p>
+<h3 id="7-与-ES5-相比，React-的-ES6-语法有何不同？"><a href="#7-与-ES5-相比，React-的-ES6-语法有何不同？" class="headerlink" title="7.与 ES5 相比，React 的 ES6 语法有何不同？"></a>7.<strong>与 ES5 相比，React 的 ES6 语法有何不同？</strong></h3><p>1.require 与 import</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// ES5</span><br><span class="line">var React = require(&apos;react&apos;);</span><br><span class="line">// ES6</span><br><span class="line">import React from &apos;react&apos;;</span><br></pre></td></tr></table></figure>
+<p>2.export 与 exports</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// ES5</span><br><span class="line">module.exports = Component; </span><br><span class="line">// ES6</span><br><span class="line">export default Component;</span><br></pre></td></tr></table></figure>
+<p>3.component 和 function</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// ES5</span><br><span class="line">var MyComponent = React.createClass(&#123;</span><br><span class="line">    render: function() &#123;</span><br><span class="line">        return</span><br><span class="line">            &lt;h3&gt;Hello Edureka!&lt;/h3&gt;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">// ES6</span><br><span class="line">class MyComponent extends React.Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return</span><br><span class="line">            &lt;h3&gt;Hello Edureka!&lt;/h3&gt;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>4.state</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">// ES5</span><br><span class="line">var App = React.createClass(&#123;</span><br><span class="line">    getInitialState: function() &#123;</span><br><span class="line">        return &#123; name: &apos;world&apos; &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">    render: function() &#123;</span><br><span class="line">        return</span><br><span class="line">            &lt;h3&gt;Hello, &#123;this.state.name&#125;!&lt;/h3&gt;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">// ES6</span><br><span class="line">class App extends React.Component &#123;</span><br><span class="line">    constructor() &#123;</span><br><span class="line">        super();</span><br><span class="line">        this.state = &#123; name: &apos;world&apos; &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return</span><br><span class="line">            &lt;h3&gt;Hello, &#123;this.state.name&#125;!&lt;/h3&gt;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="8-什么是-Props"><a href="#8-什么是-Props" class="headerlink" title="8.什么是 Props?"></a>8.<strong>什么是 Props?</strong></h3><p>Props 是 React 中属性的简写。它们是只读组件，必须保持纯，即不可变。它们总是在整个应用中从父组件传递到子组件。子组件永远不能将 prop 送回父组件。这有助于维护单向数据流，通常用于呈现动态生成的数据。</p>
+<h3 id="9-React中的状态是什么？它是如何使用的？"><a href="#9-React中的状态是什么？它是如何使用的？" class="headerlink" title="9.React中的状态是什么？它是如何使用的？"></a>9.<strong>React中的状态是什么？它是如何使用的？</strong></h3><p>状态是 React 组件的核心，是数据的来源，必须尽可能简单。基本上状态是确定组件呈现和行为的对象。与props 不同，它们是可变的，并创建动态和交互式组件。可以通过 this.state() 访问它们。</p>
+<h3 id="10-React中的状态和props的区别是啥？"><a href="#10-React中的状态和props的区别是啥？" class="headerlink" title="10. React中的状态和props的区别是啥？"></a>10. <strong>React中的状态和props的区别是啥？</strong></h3><h4 id="props"><a href="#props" class="headerlink" title="props:"></a>props:</h4><p>React的核心思想就是组件化思想，页面会被切分成一些独立的、可复用的组件。</p>
+<p>组件从概念上看就是一个函数，可以接受一个参数作为输入值，这个参数就是<code>props</code>，所以可以把<code>props</code>理解为从外部传入组件内部的数据。由于React是单向数据流，所以<code>props</code>基本上也就是从父级组件向子组件传递的数据.</p>
+<p>用法：假设我们现在需要实现一个列表，根据React组件化思想，我们可以把列表中的行当做一个组件，也就是有这样两个组件：<code>&lt;ItemList/&gt;</code>和<code>&lt;Itemdate/&gt;</code></p>
+<p>先看看<code>&lt;ItemList/&gt;</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import Item from &quot;./item&quot;;</span><br><span class="line">export default class ItemList extends React.Component&#123;</span><br><span class="line">  const itemList = data.map(item =&gt; &lt;Item item=item /&gt;);</span><br><span class="line">  render()&#123;</span><br><span class="line">    return (</span><br><span class="line">      &#123;itemList&#125;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>列表的数据我们就暂时先假设是放在一个<code>data</code>变量中，然后通过<code>map</code>函数返回一个每一项都是<code>&lt;Item item=&#39;数据&#39;/&gt;</code>的数组，也就是说这里其实包含了<code>data.length</code>个<code>&lt;Item/&gt;</code>组件，数据通过在组件上自定义一个参数传递。当然，这里想传递几个自定义参数都可以。</p>
+<p>在<code>&lt;Item /&gt;</code>中是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">export default class Item extends React.Component&#123;</span><br><span class="line">  Item.defaultProps = &#123;</span><br><span class="line">  item: &apos;Hello Props&apos;,</span><br><span class="line">&#125;;</span><br><span class="line">  Item.propTypes = &#123;</span><br><span class="line">   item: PropTypes.string,</span><br><span class="line">&#125;;</span><br><span class="line">  render()&#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;li&gt;&#123;this.props.item&#125;&lt;/li&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结:"></a>总结:</h4><p><code>props</code>是一个从外部传进组件的参数，主要作为就是从父组件向子组件传递数据，它具有可读性和不变性，只能通过外部组件主动传入新的<code>props</code>来重新渲染子组件，否则子组件的<code>props</code>以及展现形式不会改变。</p>
+<h4 id="state"><a href="#state" class="headerlink" title="state:"></a>state:</h4><p>一个组件的显示形态可以由数据状态和外部参数所决定，外部参数也就是<code>props</code>，而数据状态就是<code>state</code></p>
+<p>用法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`export ``default` `class` `ItemList extends React.Component&#123;``  ``constructor()&#123;``    ``super();``    ``this``.state = &#123;``      ``itemList:``&apos;一些数据&apos;``,``    ``&#125;``  ``&#125;``  ``render()&#123;``    ``return` `(``      ``&#123;``this``.state.itemList&#125;``    ``)``  ``&#125;``&#125;`</span><br></pre></td></tr></table></figure>
+<p>首先，在组件初始化的时候，通过<code>this.state</code>给组件设定一个初始的<code>state</code>，在第一次<code>render</code>的时候就会用这个数据来渲染组件。</p>
+<h4 id="setState："><a href="#setState：" class="headerlink" title="setState："></a>setState：</h4><p><code>state</code>不同于<code>props</code>的一点是，<code>state</code>是可以被改变的。不过，不可以直接通过<code>this.state=</code>的方式来修改，而需要通过<code>this.setState()</code>方法来修改<code>state</code>。</p>
+<p>比如，我们经常会通过异步操作来获取数据，我们需要在<code>didMount</code>阶段来执行异步操作：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">componentDidMount()&#123;</span><br><span class="line">  fetch(&apos;url&apos;)</span><br><span class="line">    .then(response =&gt; response.json())</span><br><span class="line">    .then((data) =&gt; &#123;</span><br><span class="line">      this.setState(&#123;itemList:item&#125;);&#123;/*当数据获取完成后，通过this.setState来修改数据状态。,当我们调用this.setState方法时，React会更新组件的数据状态state，并且重新调用render方法，也就是会对组件进行重新渲染*/&#125; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> &#123;/*用 this.setState()更新组件的状态*/&#125;</span><br><span class="line"> class MyComponent extends React.Component &#123;</span><br><span class="line">    constructor() &#123;</span><br><span class="line">        super();</span><br><span class="line">        this.state = &#123;</span><br><span class="line">            name: &apos;Maxx&apos;,</span><br><span class="line">            id: &apos;101&apos;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    render()</span><br><span class="line">        &#123;</span><br><span class="line">            setTimeout(()=&gt;&#123;this.setState(&#123;name:&apos;Jaeha&apos;, id:&apos;222&apos;&#125;)&#125;,2000)</span><br><span class="line">            return (              </span><br><span class="line">                &lt;div&gt;</span><br><span class="line">                    &lt;h1&gt;Hello &#123;this.state.name&#125;&lt;/h1&gt;</span><br><span class="line">                    &lt;h2&gt;Your Id is &#123;this.state.id&#125;&lt;/h2&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">ReactDOM.render(</span><br><span class="line">    &lt;MyComponent/&gt;, document.getElementById(&apos;content&apos;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h4 id="总结-1"><a href="#总结-1" class="headerlink" title="总结:"></a>总结:</h4><p><code>state</code>的主要作用是用于组件保存、控制以及修改自己的状态，它只能在<code>constructor</code>中初始化，它算是组件的私有属性，不可通过外部访问和修改，只能通过组件内部的<code>this.setState</code>来修改，修改<code>state</code>属性会导致组件的重新渲染。</p>
+<h4 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h4><ol>
+<li><code>state</code>是组件自己管理数据，控制自己的状态，可变；</li>
+<li><code>props</code>是外部传入的数据参数，不可变；</li>
+<li>没有<code>state</code>的叫做无状态组件，有<code>state</code>的叫做有状态组件；</li>
+<li>多用<code>props</code>，少用<code>state</code>。也就是多写无状态组件。</li>
+</ol>
+<h3 id="11-React中的合成事件是什么？"><a href="#11-React中的合成事件是什么？" class="headerlink" title="11. React中的合成事件是什么？"></a>11. <strong>React中的合成事件是什么？</strong></h3><p>合成事件是围绕浏览器原生事件充当跨浏览器包装器的对象。它们将不同浏览器的行为合并为一个 API。这样做是为了确保事件在不同浏览器中显示一致的属性。</p>
+<h3 id="12-你对-React-的-refs-有什么了解？"><a href="#12-你对-React-的-refs-有什么了解？" class="headerlink" title="12.你对 React 的 refs 有什么了解？"></a>12.<strong>你对 React 的 refs 有什么了解？</strong></h3><p>Refs 是 React 中引用的简写。它是一个有助于存储对特定的 React 元素或组件的引用的属性，它将由组件渲染配置函数返回。用于对 render() 返回的特定元素或组件的引用。当需要进行 DOM 测量或向组件添加方法时，它们会派上用场,还有在正常的 <code>react</code> 数据流中，<code>props</code> 是父组件与子元素交互的唯一渠道。如果想要修改子元素，你需要通过一个新的 <code>props</code> 进行重新渲染。但是，在一些情境下，你需要在正常数据流外强行修改子元素，这时，你就需要用到 <code>refs</code>。修改的子元素可以是<strong>react组件的实例</strong>，也可以是<strong>DOM元素</strong>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;VideoPlay url=&quot;www.hclzx.com&quot; /&gt;</span><br><span class="line">&lt;button&gt;pause&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">class VideoPlay extends React.Component&#123;</span><br><span class="line">    render()&#123;</span><br><span class="line">        &lt;video src=&#123;this.props.url&#125;&gt;我是视频&lt;/video&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如上面的代码，组件 <code>VideoPlay</code>中是视频的URL，它与其子元素 <code>video</code> 之间沟通仅依靠 <code>props</code> ，如果我想修改子元素 <code>video</code> 的URL链接，只能通过修改组件 <code>VideoPlay</code>中的 <code>url</code> 属性来进行。然而，此时需求是当我点击按钮的时候，需要对视频进行暂停。这个暂停的动作不可能通过更改 <code>props</code> 然后重新渲染页面来实现。这时我就需要在子元素 <code>video</code> 中加入一个属性 <code>ref</code> 来进行强制修改。react将这个 <code>refs</code> 叫做 <strong>紧急舱口</strong> 。</p>
+<h5 id="什么时候使用refs"><a href="#什么时候使用refs" class="headerlink" title="什么时候使用refs"></a>什么时候使用refs</h5><p>1.管理焦点、文本选择或媒体回放。</p>
+<p>2.触发命令动画。</p>
+<p>3.与第三方DOM库集成。</p>
+<h3 id="13-MVC框架的主要问题是什么？"><a href="#13-MVC框架的主要问题是什么？" class="headerlink" title="13.MVC框架的主要问题是什么？"></a>13.<strong>MVC框架的主要问题是什么？</strong></h3><p>1.对 DOM 操作的代价非常高<br>2.程序运行缓慢且效率低下<br>3.内存浪费严重<br>4.由于循环依赖性，组件模型需要围绕 models 和 views 进行创建</p>
+<h3 id="14-什么是Flux"><a href="#14-什么是Flux" class="headerlink" title="14.什么是Flux"></a>14.<strong>什么是Flux</strong></h3><p>Flux是Facebook用于构建客户端Web应用程序的一个<strong>系统架构</strong>。它通过<strong>利用单向数据流来补充React的可组合视图组件</strong>。它更像是一种模式，而不是一个正式的框架。</p>
+<p>Flux将一个应用分成<strong>四个部分</strong>。</p>
+<p>1.View： 视图层 </p>
+<p>2.Action（动作）：视图层发出的消息（比如mouseClick） </p>
+<p>3.Dispatcher（派发器）：用来接收Actions、执行回调函数</p>
+<p>4.Store（数据层）：用来存放应用的状态，一旦发生变动就提醒Views要更新页面</p>
+<h3 id="15-Redux遵循的三个原则是什么？"><a href="#15-Redux遵循的三个原则是什么？" class="headerlink" title="15. Redux遵循的三个原则是什么？"></a>15. <strong>Redux遵循的三个原则是什么？</strong></h3><p>1.单一事实来源：整个应用的状态存储在单个 store 中的对象/状态树里。单一状态树可以更容易地跟踪随时间的变化，并调试或检查应用程序。</p>
+<p>2.状态是只读的：改变状态的唯一方法是去触发一个动作。动作是描述变化的普通 JS 对象。就像 state 是数据的最小表示一样，该操作是对数据更改的最小表示。</p>
+<p>3.使用纯函数进行更改：为了指定状态树如何通过操作进行转换，你需要纯函数。纯函数是那些返回值仅取决于其参数值的函数。</p>
+<h3 id="16-你对“单一事实来源”有什么理解？"><a href="#16-你对“单一事实来源”有什么理解？" class="headerlink" title="16.你对“单一事实来源”有什么理解？"></a>16.<strong>你对“单一事实来源”有什么理解？</strong></h3><p>Redux 使用 “Store” 将程序的整个状态存储在同一个地方。因此所有组件的状态都存储在 Store 中，并且它们从 Store 本身接收更新。单一状态树可以更容易地跟踪随时间的变化，并调试或检查程序</p>
+<h3 id="17-列出-Redux-的组件"><a href="#17-列出-Redux-的组件" class="headerlink" title="17.列出 Redux 的组件"></a>17.<strong>列出 Redux 的组件</strong></h3><p>1.Action – 这是一个用来描述发生了什么事情的对象。<br>2.Reducer – 这是一个确定状态将如何变化的地方。<br>3.Store – 整个程序的状态/对象树保存在Store中。<br>4.View – 只显示 Store 提供的数据</p>
+<h3 id="18-如何在-Redux-中定义-Action？"><a href="#18-如何在-Redux-中定义-Action？" class="headerlink" title="18.如何在 Redux 中定义 Action？"></a>18.<strong>如何在 Redux 中定义 Action？</strong></h3><p>React 中的 Action 必须具有 type 属性，该属性指示正在执行的 ACTION 的类型。必须将它们定义为字符串常量，并且还可以向其添加更多的属性。在 Redux 中，action 被名为 Action Creators 的函数所创建。以下是 Action 和Action Creator 的示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function addTodo(text) &#123;</span><br><span class="line">       return &#123;</span><br><span class="line">                type: ADD_TODO,    </span><br><span class="line">                 text</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="19-解释-Reducer-的作用"><a href="#19-解释-Reducer-的作用" class="headerlink" title="19.解释 Reducer 的作用"></a>19.<strong>解释 Reducer 的作用</strong></h3><p>Reducers 是纯函数，它规定应用程序的状态怎样因响应 ACTION 而改变。Reducers 通过接受先前的状态和 action 来工作，然后它返回一个新的状态。它根据操作的类型确定需要执行哪种更新，然后返回新的值。如果不需要完成任务，它会返回原来的状态。</p>
+<h3 id="20-Store-在-Redux-中的意义是什么？"><a href="#20-Store-在-Redux-中的意义是什么？" class="headerlink" title="20.Store 在 Redux 中的意义是什么？"></a>20.<strong>Store 在 Redux 中的意义是什么？</strong></h3><p>Store 是一个 JavaScript 对象，它可以保存程序的状态，并提供一些方法来访问状态、调度操作和注册侦听器。应用程序的整个状态/对象树保存在单一存储中。因此，Redux 非常简单且是可预测的。我们可以将中间件传递到 store 来处理数据，并记录改变存储状态的各种操作。所有操作都通过 reducer 返回一个新状态。</p>
+<h3 id="21-Redux-有哪些优点？"><a href="#21-Redux-有哪些优点？" class="headerlink" title="21.Redux 有哪些优点？"></a>21.<strong>Redux 有哪些优点？</strong></h3><p>结果的可预测性 - 由于总是存在一个真实来源，即 store ，因此不存在如何将当前状态与动作和应用的其他部分同步的问题。<br> 可维护性 - 代码变得更容易维护，具有可预测的结果和严格的结构。<br> 服务器端渲染 - 你只需将服务器上创建的 store 传到客户端即可。这对初始渲染非常有用，并且可以优化应用性能，从而提供更好的用户体验。<br> 开发人员工具 - 从操作到状态更改，开发人员可以实时跟踪应用中发生的所有事情。<br> 社区和生态系统 - Redux 背后有一个巨大的社区，这使得它更加迷人。一个由才华横溢的人组成的大型社区为库的改进做出了贡献，并开发了各种应用。<br> 易于测试 - Redux 的代码主要是小巧、纯粹和独立的功能。这使代码可测试且独立。<br> 组织 - Redux 准确地说明了代码的组织方式，这使得代码在团队使用时更加一致和简单。</p>
+<h3 id="22-列出-React-Router-的优点"><a href="#22-列出-React-Router-的优点" class="headerlink" title="22. 列出 React Router 的优点"></a>22. <strong>列出 React Router 的优点</strong></h3><p>就像 React 基于组件一样，在 React Router v4 中，API 是 ‘All About Components’。可以将 Router 可视化为单个根组件（<browserrouter>），其中我们将特定的子路由（<route>）包起来。<br> 无需手动设置历史值：在 React Router v4 中，我们要做的就是将路由包装在 <browserrouter> 组件中。<br> 包是分开的：共有三个包，分别用于 Web、Native 和 Core。这使我们应用更加紧凑。基于类似的编码风格很容易进行切换。</browserrouter></route></browserrouter></p>
+
+    </div>
+
+    <div class="article-footer">
+      
+    </div>
+
+    <div class="article-navs">
+      
+<nav class="card-container card-article-nav">
+  <div class="card-wrap">
+    
+      <div class="card-item">
+        <article>
+          
+          <a class="card-link article-nav-link" href="/2019/07/29/react-mst/"></a>
+          <div class="article-nav-caption">Newer</div>
+          <div class="article-nav-title">React 面试题</div>
+        </article>
+      </div>
+    
+    
+      <div class="card-item">
+        <article>
+          
+          <a class="card-link article-nav-link" href="/2019/05/30/我的博客/"></a>
+          <div class="article-nav-caption">Older</div>
+          <div class="article-nav-title">我的博客</div>
+        </article>
+      </div>
+    
+  </div>
+</nav>
+
+    </div>
+    
+    
+  <div id="comment-container" class="comment-container"></div>
+
+  </article>
+</div></section>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    <p>&copy; 2019 <a href="/" target="_blank">John Doe</a></p>
+
+    
+      <p id="hitokoto"></p>
+      <script src="https://v1.hitokoto.cn/?c=a&amp;encode=js&select=%23hitokoto" defer></script>
+    
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank">flex-block</a></p>
+  </div>
+</footer>
+  </div>
+
+  
+  <!-- 尾部其他内容 -->
+
+<!-- analytics -->
+
+
+
+
+
+
+
+  
+  
+
+<!-- dplayer 视频 -->
+<link rel="stylesheet" href="/lib/DPlayer.min.css">
+<script src="/lib/DPlayer.min.js"></script>
+<script type="text/javascript">
+  const dplayer = document.querySelectorAll(".dplayer");
+  dplayer && initDPlayer(dplayer);
+  function initDPlayer(els) {
+    let elsArr = Array.from(els);
+    elsArr.forEach(el => {
+      let url = el.dataset.url;
+      let cover = el.dataset.cover;
+      new DPlayer({
+        container: el,
+        video: { url: url, pic: cover },
+        theme: "#b7daff",
+        autoplay: false,
+        loop: false,
+        mutex: true,
+      });
+    });
+  }
+</script>
+
+
+<!-- 瀑布流 -->
+<script src="/lib/macy.js"></script>
+<script type="text/javascript">
+
+if (document.querySelector(".waterfall-container")) {
+  initCss()
+  initMacy(".waterfall-container")
+}
+
+function initMacy(selector) {
+  new Macy({
+    container: selector,
+    trueOrder: false,
+    waitForImages: false,
+    useOwnImageLoader: false,
+    mobileFirst: true,
+    columns: 1,
+    margin: {
+      y: 16,
+      x: '2%',
+    },
+    breakAt: {
+      1200: {
+        margin: {
+          x: 20
+        },
+        columns: 4
+      },
+      940: {
+        margin: {
+          x: 20
+        },
+        columns: 3
+      },
+      520: {
+        margin: {
+          x: 10
+        },
+        columns: 2
+      },
+      400: {
+        margin: {
+          x: 0
+        },
+        columns: 1
+      },
+    }
+  });
+}
+
+function initCss() {
+  let cssStyle = document.createElement("style")
+  cssStyle.innerText = `.waterfall-container p { display: block; border-radius: 4px; overflow: hidden; margin: 0; }`
+  document.head.appendChild(cssStyle);
+}
+</script>
+
+
+<!-- 图片预览 -->
+<script src="/lib/zoom.min.js"></script>
+<script>
+  document.querySelector(".zoom") && zoom(".zoom", {
+    margin: 15,
+    padding: 15,
+    radius: 5,
+    specify: "",
+    filter: "gallery",
+  });
+</script>
+
+
+<script src="/js/script.js"></script>
+</body>
+</html>
