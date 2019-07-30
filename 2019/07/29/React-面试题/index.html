@@ -154,7 +154,7 @@
 <h3 id="5-你了解-Virtual-DOM-吗？解释一下它的工作原理。"><a href="#5-你了解-Virtual-DOM-吗？解释一下它的工作原理。" class="headerlink" title="5.你了解 Virtual DOM 吗？解释一下它的工作原理。"></a>5.<strong>你了解 Virtual DOM 吗？解释一下它的工作原理。</strong></h3><p>Virtual DOM 是一个轻量级的 JavaScript 对象，它最初只是 real DOM 的副本。它是一个节点树，它将元素、它们的属性和内容作为对象及其属性。 React 的渲染函数从 React 组件中创建一个节点树。然后它响应数据模型中的变化来更新该树，该变化是由用户或系统完成的各种动作引起的。</p>
 <p>Virtual DOM 工作过程有三个简单的步骤：</p>
 <p>1.每当底层数据发生改变时，整个 UI 都将在 Virtual DOM 描述中重新渲染。</p>
-<p><img src="/.io//Users\student\Desktop\tupian\13133049-78fc12f6dcb6e9be (1" alt>.webp)</p>
+<p><img src="/.io//Users\student\Desktop\tupian\13133049-78fc12f6dcb6e9be (                         1" alt>.webp)</p>
 <p>2.然后计算之前 DOM 表示与新表示的之间的差异。</p>
 <p><img src="/.io//Users\student\Desktop\tupian\13133049-bf2f5564cac2d6e6.webp" alt></p>
 <p>3.完成计算后，将只用实际更改的内容更新 real DOM。</p>
@@ -200,13 +200,18 @@
 <h5 id="什么时候使用refs"><a href="#什么时候使用refs" class="headerlink" title="什么时候使用refs"></a>什么时候使用refs</h5><p>1.管理焦点、文本选择或媒体回放。</p>
 <p>2.触发命令动画。</p>
 <p>3.与第三方DOM库集成。</p>
-<h3 id="13-MVC框架的主要问题是什么？"><a href="#13-MVC框架的主要问题是什么？" class="headerlink" title="13.MVC框架的主要问题是什么？"></a>13.<strong>MVC框架的主要问题是什么？</strong></h3><p>1.对 DOM 操作的代价非常高<br>2.程序运行缓慢且效率低下<br>3.内存浪费严重<br>4.由于循环依赖性，组件模型需要围绕 models 和 views 进行创建</p>
+<h3 id="13-MVC框架的主要问题是什么？"><a href="#13-MVC框架的主要问题是什么？" class="headerlink" title="13.MVC框架的主要问题是什么？"></a>13.<strong>MVC框架的主要问题是什么？</strong></h3><p>1.对 DOM 操作的代价非常高(一些高级的界面工具不支持mvc，要想使用mvc框架，就要改变这些工具，这代价是很高的)<br>2.程序运行缓慢且效率低下(对于比较简单的页面，如果严格遵循Mvc框架，使模型，视图与控制器分离，会增加结构的复杂性，可能会产生过多的更新操作，影响程序的效率)</p>
+<p>3.内存浪费严重</p>
+<p>4.由于循环依赖性，组件模型需要围绕 models 和 views 进行创建</p>
+<p>5.视图对模型数据的低效率访问；依据模型操作接口的不同，视图可能需要多次调用才能获得足够的显示数据。对未变化数据的不必要的频繁访问，也将损害操作性能。</p>
+<p>6.视图与控制器过于紧密的连接：视图与控制器是相互分离，但确实联系紧密的部件，视图没有控制器的存在，其应用是很有限的，反之亦然，这样就妨碍了他们的独立重用</p>
 <h3 id="14-什么是Flux"><a href="#14-什么是Flux" class="headerlink" title="14.什么是Flux"></a>14.<strong>什么是Flux</strong></h3><p>Flux是Facebook用于构建客户端Web应用程序的一个<strong>系统架构</strong>。它通过<strong>利用单向数据流来补充React的可组合视图组件</strong>。它更像是一种模式，而不是一个正式的框架。</p>
 <p>Flux将一个应用分成<strong>四个部分</strong>。</p>
 <p>1.View： 视图层 </p>
-<p>2.Action（动作）：视图层发出的消息（比如mouseClick） </p>
-<p>3.Dispatcher（派发器）：用来接收Actions、执行回调函数</p>
-<p>4.Store（数据层）：用来存放应用的状态，一旦发生变动就提醒Views要更新页面</p>
+<p>2.Action（动作）：视图层发出的消息（比如mouseClick）</p>
+<p>（每个Action都是一个对象，包含一个actionType属性和一些其他属性（用来传递数据）。Action中利用Dispatcher的把具体的动作（actionType）派发到Store） </p>
+<p>3.Dispatcher（派发器）：用来接收Actions、执行回调函数，Dispatcher 的作用是将 Action 派发到 Store，可以把它看作一个路由器，负责在 View 和 Store 之间，建立 Action 的正确传递路线。注意，Dispatcher 只能有一个，而且是全局的。</p>
+<p>4.Store（数据层）：用来存放应用的状态，一旦发生变动就提醒Views要更新页面， Store 保存整个应用的state状态。它的角色有点像 MVC 架构之中的Model，官方提供的工具类flux/utils。</p>
 <h3 id="15-Redux遵循的三个原则是什么？"><a href="#15-Redux遵循的三个原则是什么？" class="headerlink" title="15. Redux遵循的三个原则是什么？"></a>15. <strong>Redux遵循的三个原则是什么？</strong></h3><p>1.单一事实来源：整个应用的状态存储在单个 store 中的对象/状态树里。单一状态树可以更容易地跟踪随时间的变化，并调试或检查应用程序。</p>
 <p>2.状态是只读的：改变状态的唯一方法是去触发一个动作。动作是描述变化的普通 JS 对象。就像 state 是数据的最小表示一样，该操作是对数据更改的最小表示。</p>
 <p>3.使用纯函数进行更改：为了指定状态树如何通过操作进行转换，你需要纯函数。纯函数是那些返回值仅取决于其参数值的函数。</p>
